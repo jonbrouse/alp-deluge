@@ -1,13 +1,9 @@
 # Docker Deluge - (Alpine Base)
 
-A docker container for Deluge, this uses Alpine Linux as a base to keep filesize low. Total size of this image is 129.4mb!
-Create the image by running below command, the default web GUI password is 'deluge'
-
-```sh
-docker build --tag=mlindsey/alp-deluge
-```
+A docker container for Deluge, this uses Alpine Linux as a base (6mb) to keep the image small.
 
 Run image with run_docker.sh or the below command:
+The default web GUI password is 'deluge'
 
 ```sh
 docker run -d --name=alp-deluge -v /torrents:/torrents -p 8112:8112 alp-deluge
@@ -19,6 +15,5 @@ Inprogress - '/torrents/.in_progress'
 Completed torrents - '/torrents/'
 
 ## Configuration Data
-Stored under '/config'.
-
+Stored under the '/config' directory.
 
