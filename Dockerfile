@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM alpine
 MAINTAINER mlindsey@fastmail.com.au
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
