@@ -1,13 +1,14 @@
-FROM alpine
+FROM alpine:3.2
 MAINTAINER mlindsey@fastmail.com.au
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk update
-RUN apk add bash deluge@testing && \
+RUN apk add bash py-pip deluge@testing && \
     rm -rf /var/cache/apk/*
-
 ADD assets/config /config
 ADD assets/startdeluge /usr/local/bin/startdeluge
+ADD assets/requirements.txt /requirements.txt
+RUN pip install --upgrade && pip install --upgrade setuptools && pip install enum34 service_identity -r /requirements.txt
 RUN chmod 777 /usr/local/bin/startdeluge
 RUN chmod 777 /config
 RUN mkdir /torrents && chmod 777 /torrents

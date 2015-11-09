@@ -1,0 +1,8 @@
+boto==2.38.0
+characteristic==14.3.0
+click==4.0
+csvdiff==0.3.0
+jsonschema==2.4.0
+pyasn1==0.1.9
+pyasn1-modules==0.0.8
+wheel==0.26.0
