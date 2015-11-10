@@ -1,6 +1,6 @@
 # Docker Deluge - (Alpine Base)
 
-A docker container for Deluge, this uses Alpine Linux as a base (6mb) to keep the image small.
+A docker container for Deluge, this uses Alpine Linux as a base (6mb) to keep the image small..
 
 ### Dockerhub
 The built image is also hosted at dockerhub, therefore to just get Deluge up and running without 
